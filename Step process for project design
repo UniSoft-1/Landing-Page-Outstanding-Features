@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web3 Journey Steps</title>
+    <style>
+        /* Section Styling */
+        .get-started-section {
+            font-family: 'Poppins', sans-serif;
+            max-width: 90%;
+            margin: auto;
+            padding: 4vw 3vw;
+            background: linear-gradient(135deg, #f6f9fc, #e3e7eb);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Section Title */
+        .get-started-section h2 {
+            color: #1a1a1a;
+            font-size: 2.2vw;
+            margin-bottom: 2vw;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Steps Container */
+        .steps-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5vw;
+        }
+
+        /* Clickable Step Box */
+        .step {
+            flex-basis: calc(50% - 2vw);
+            background: white;
+            border-radius: 10px;
+            padding: 2vw;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            text-align: left;
+            cursor: pointer;
+text-decoration: none; /* Remove underline */
+            color: inherit; /* Keep original text color */
+        }
+
+        /* Step Hover Effect */
+        .step:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            background: #f8f9fa;
+        }
+
+        
+        /* Ensure visited links do not show underline */
+        .step a:visited {
+            text-decoration-color: transparent;
+            color: inherit;
+        }
+
+        /* Ensure hover does not bring back the underline */
+        .step a:hover {
+            text-decoration-color: transparent;
+            color: inherit;
+        }
+
+        /* Step Number & Title */
+        .step h3 {
+            color: #007bff;
+            font-size: 1.6vw;
+            margin-bottom: 0.5vw;
+            font-weight: 600;
+        }
+
+        /* Step Description */
+        .step p {
+            color: #555;
+            font-size: 1.1vw;
+            line-height: 1.5;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 1024px) {
+            .step {
+                flex-basis: 100%;
+                padding: 2.5vw;
+            }
+            .get-started-section h2 {
+                font-size: 3.5vw;
+            }
+            .step h3 {
+                font-size: 2.5vw;
+            }
+            .step p {
+                font-size: 1.8vw;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .get-started-section {
+                padding: 5vw;
+            }
+            .get-started-section h2 {
+                font-size: 4vw;
+            }
+            .step {
+                padding: 4vw;
+            }
+            .step h3 {
+                font-size: 3vw;
+            }
+            .step p {
+                font-size: 2vw;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Web3 Journey Section -->
+    <section class="get-started-section">
+        <h2>Embark on Your Web3 Journey Today</h2>
+        <div class="steps-container">
+            
+            <a href="https://victorianvanguardventures.com/define-your-vision" class="step" target="_blank" rel="noopener noreferrer">
+                <h3>1. Define Your Vision</h3>
+                <p>Clarify your project goals and identify the specific blockchain features you need. Whether it's a DApp, NFT marketplace, or DeFi platform, a clear vision is crucial.</p>
+            </a>
+
+            <a href="https://victorianvanguardventures.com/choose-your-blockchain" class="step" target="_blank" rel="noopener noreferrer">
+                <h3>2. Choose Your Blockchain</h3>
+                <p>Select the right blockchain for your project. Consider factors like scalability, cost, and community support. Options include Ethereum, Binance Smart Chain, or Solana.</p>
+            </a>
+
+            <a href="https://victorianvanguardventures.com/design-smart-contracts" class="step" target="_blank" rel="noopener noreferrer">
+                <h3>3. Design Smart Contracts</h3>
+                <p>Develop secure and efficient smart contracts that will form the backbone of your Web3 application. Ensure they're audited for security vulnerabilities.</p>
+            </a>
+
+            <a href="https://victorianvanguardventures.com/create-your-frontend" class="step" target="_blank" rel="noopener noreferrer">
+                <h3>4. Create Your Frontend</h3>
+                <p>Build an intuitive user interface that seamlessly interacts with your smart contracts. Use Web3 libraries to connect your frontend with the blockchain.</p>
+            </a>
+
+            <a href="https://victorianvanguardventures.com/test-rigurously
+" class="step" target="_blank" rel="noopener noreferrer">
+                <h3>5. Test Rigorously</h3>
+                <p>Conduct thorough testing on testnets before launching. This includes unit tests, integration tests, and user acceptance testing to ensure a smooth user experience.</p>
+            </a>
+
+            <a href="https://victorianvanguardventures.com/deploy-and-monitor" class="step" target="_blank" rel="noopener noreferrer">
+                <h3>6. Deploy and Monitor</h3>
+                <p>Launch your application on the mainnet. Implement analytics and monitoring tools to track performance, user engagement, and potential issues in real-time.</p>
+            </a>
+
+        </div>
+    </section>
+
+</body>
+</html>
