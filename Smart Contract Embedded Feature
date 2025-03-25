@@ -1,0 +1,98 @@
+<style>
+    .dex-code-window {
+        background-color: #1e1e1e;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 20px 0;
+        overflow-y: auto;
+        max-height: 400px; /* Set a fixed height to enable scrolling */
+        font-family: 'Courier New', Courier, monospace;
+        color: #d4d4d4;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    .dex-code-window pre {
+        margin: 0;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+    .dex-code-window .comment { color: #6a9955; }
+    .dex-code-window .keyword { color: #569cd6; }
+    .dex-code-window .string { color: #ce9178; }
+    .dex-code-window .function { color: #dcdcaa; }
+    /* Customizing scrollbar for webkit browsers */
+    .dex-code-window::-webkit-scrollbar {
+        width: 5px;
+    }
+    .dex-code-window::-webkit-scrollbar-track {
+        background: #2e2e2e;
+    }
+    .dex-code-window::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 6px;
+        border: 3px solid #2e2e2e;
+    }
+</style>
+<div class="dex-code-window">
+<pre>
+<span class="comment">// SPDX-License-Identifier: MIT</span>
+<span class="keyword">pragma solidity</span> ^0.8.0;
+
+<span class="keyword">import</span> <span class="string">"@openzeppelin/contracts/token/ERC20/IERC20.sol"</span>;
+<span class="keyword">import</span> <span class="string">"@openzeppelin/contracts/utils/math/SafeMath.sol"</span>;
+
+<span class="keyword">contract</span> <span class="function">SimpleDEX</span> {
+    <span class="keyword">using</span> SafeMath <span class="keyword">for</span> uint256;
+
+    IERC20 <span class="keyword">public</span> token;
+    <span class="keyword">mapping</span>(address => uint256) <span class="keyword">public</span> ethBalance;
+    <span class="keyword">mapping</span>(address => uint256) <span class="keyword">public</span> tokenBalance;
+
+    <span class="keyword">event</span> <span class="function">Deposit</span>(address indexed user, uint256 amount, <span class="keyword">bool</span> isEth);
+    <span class="keyword">event</span> <span class="function">Withdraw</span>(address indexed user, uint256 amount, <span class="keyword">bool</span> isEth);
+    <span class="keyword">event</span> <span class="function">Trade</span>(address indexed user, uint256 ethAmount, uint256 tokenAmount);
+
+    <span class="function">constructor</span>(address _token) {
+        token = IERC20(_token);
+    }
+
+    <span class="function">function</span> depositEth() <span class="keyword">external</span> <span class="keyword">payable</span> {
+        ethBalance[msg.sender] = ethBalance[msg.sender].add(msg.value);
+        <span class="keyword">emit</span> Deposit(msg.sender, msg.value, <span class="keyword">true</span>);
+    }
+
+    <span class="function">function</span> depositToken(uint256 _amount) <span class="keyword">external</span> {
+        <span class="keyword">require</span>(token.transferFrom(msg.sender, address(<span class="keyword">this</span>), _amount), <span class="string">"Transfer failed"</span>);
+        tokenBalance[msg.sender] = tokenBalance[msg.sender].add(_amount);
+        <span class="keyword">emit</span> Deposit(msg.sender, _amount, <span class="keyword">false</span>);
+    }
+
+    <span class="function">function</span> withdrawEth(uint256 _amount) <span class="keyword">external</span> {
+        <span class="keyword">require</span>(ethBalance[msg.sender] >= _amount, <span class="string">"Insufficient balance"</span>);
+        ethBalance[msg.sender] = ethBalance[msg.sender].sub(_amount);
+        payable(msg.sender).transfer(_amount);
+        <span class="keyword">emit</span> Withdraw(msg.sender, _amount, <span class="keyword">true</span>);
+    }
+
+    <span class="function">function</span> withdrawToken(uint256 _amount) <span class="keyword">external</span> {
+        <span class="keyword">require</span>(tokenBalance[msg.sender] >= _amount, <span class="string">"Insufficient balance"</span>);
+        tokenBalance[msg.sender] = tokenBalance[msg.sender].sub(_amount);
+        <span class="keyword">require</span>(token.transfer(msg.sender, _amount), <span class="string">"Transfer failed"</span>);
+        <span class="keyword">emit</span> Withdraw(msg.sender, _amount, <span class="keyword">false</span>);
+    }
+
+    <span class="function">function</span> trade(uint256 _ethAmount, uint256 _tokenAmount) <span class="keyword">external</span> {
+        <span class="keyword">require</span>(ethBalance[msg.sender] >= _ethAmount, <span class="string">"Insufficient ETH balance"</span>);
+        <span class="keyword">require</span>(tokenBalance[msg.sender] >= _tokenAmount, <span class="string">"Insufficient token balance"</span>);
+        
+        <span class="comment">// Simplified trading logic (in a real DEX, you'd use an AMM formula)</span>
+        ethBalance[msg.sender] = ethBalance[msg.sender].sub(_ethAmount);
+        tokenBalance[msg.sender] = tokenBalance[msg.sender].add(_tokenAmount);
+        
+        <span class="keyword">emit</span> Trade(msg.sender, _ethAmount, _tokenAmount);
+    }
+
+    <span class="comment">// Additional functions: price calculations, liquidity provision, etc.</span>
+}
+</pre>
+</div>
