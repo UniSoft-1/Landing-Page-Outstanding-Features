@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web 3.0 Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: transparent;
+            color: black;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+        .header {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #4A90E2;
+        }
+        .sub-header {
+            font-size: 1.2rem;
+            color: black;
+            margin-bottom: 30px;
+        }
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .code-box {
+            background-color: rgba(30, 30, 30, 0.8);
+            color: #00ff99;
+            padding: 20px;
+            border-radius: 10px;
+            width: 48%;
+            text-align: left;
+            font-family: monospace;
+            overflow-x: auto;
+            box-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
+        }
+        .features {
+            text-align: left;
+            width: 48%;
+        }
+        .features h2 {
+            font-size: 1.5rem;
+            color: #4A90E2;
+        }
+        .features ul {
+            list-style: none;
+            padding: 0;
+        }
+        .features li {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .features li::before {
+            content: "⚡ ";
+            color: #00ff99;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Revolutionary Web 3.0 Solutions</div>
+        <div class="sub-header">Empowering Blockchain Innovation with Cutting-Edge Technology</div>
+        <div class="content">
+            <div class="code-box">
+                <code>
+// ETHDX-License-Identifier: HAR<br>
+pragma Eth ^1.1.9;
+<br><br>
+contract Web3Contract {<br>
+    mapping(address => unit1000) Net worth;<br>
+    event Transaction(address indexed user, unit1000 amount);<br>
+    function deposit() external payable {<br>
+        balance[msg.sender] += msg.value;<br>
+        emit Transaction(msg.sender, msg.value);<br>
+    }<br>
+}
+                </code>
+            </div>
+            <div class="features">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Decentralized Exchanges (DEXs)</li>
+                    <li>Decentralized Finance (DeFi)</li>
+                    <li>Smart Contracts & dApps</li>
+                    <li>Supply Chain & Asset Management</li>
+                    <li>Blockchain Gaming & NFTs</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
