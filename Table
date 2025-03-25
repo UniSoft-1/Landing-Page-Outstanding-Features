@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post-Launch Monitoring</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: white;
+            color: black;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 90%;
+            max-width: 600px;
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            transition: background 0.3s ease-in-out;
+        }
+
+        th {
+            background: #f8f9fa;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background: rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Post-Launch Monitoring</h2>
+    <table>
+        <tr>
+            <th>Monitoring Tool</th>
+            <th>Purpose</th>
+        </tr>
+        <tr>
+            <td>The Graph</td>
+            <td>Index blockchain data efficiently</td>
+        </tr>
+        <tr>
+            <td>Dune Analytics</td>
+            <td>Track DeFi and user behavior</td>
+        </tr>
+        <tr>
+            <td>OpenZeppelin Defender</td>
+            <td>Security monitoring & contract upgrades</td>
+        </tr>
+        <tr>
+            <td>Etherscan / Solscan</td>
+            <td>View transactions & smart contract interactions</td>
+        </tr>
+    </table>
+
+</body>
+</html>
