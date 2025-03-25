@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Language Logos</title>
+    <style>
+        /* Container Styling */
+        .logo-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); /* Reduced box size */
+            gap: 15px; /* Reduced spacing */
+            justify-content: center;
+            align-items: center;
+            padding: 20px; /* Reduced padding */
+            max-width: 90%;
+            margin: auto;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Individual Logo Card (Reduced Size) */
+        .logo-card {
+            text-align: center;
+            padding: 10px; /* Reduced padding */
+            border-radius: 8px; /* Slightly smaller rounded corners */
+            background: #f8f9fa;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            opacity: 0;
+            animation: appear 1s ease-in-out forwards;
+            max-width: 100px; /* Restrict width */
+        }
+
+        /* Logo Image */
+        .logo-card img {
+            width: 70px; /* Slightly smaller logo */
+            height: 70px;
+            transition: transform 0.3s ease;
+        }
+
+        /* Logo Text */
+        .logo-card p {
+            margin-top: 5px; /* Less space */
+            font-size: 0.9rem; /* Reduced font size */
+            font-weight: 600;
+            color: #333;
+        }
+
+        /* Hover Effect */
+        .logo-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
+        }
+
+        .logo-card:hover img {
+            transform: rotate(10deg);
+        }
+
+        /* Fade-in Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Appear Animation */
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .logo-container {
+                grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            }
+            .logo-card {
+                max-width: 90px;
+            }
+            .logo-card img {
+                width: 60px;
+                height: 60px;
+            }
+            .logo-card p {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .logo-card {
+                max-width: 85px;
+                padding: 8px;
+            }
+            .logo-card img {
+                width: 55px;
+                height: 55px;
+            }
+            .logo-card p {
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo Section -->
+    <div class="logo-container">
+        <!-- Solidity -->
+        <div class="logo-card">
+            <img src="https://docs.soliditylang.org/en/latest/_images/solidity_logo.svg" alt="Solidity">
+            <p>Solidity</p>
+        </div>
+
+        <!-- Rust -->
+        <div class="logo-card">
+            <img src="https://avatars.githubusercontent.com/u/130611478?s=280&v=4" alt="Rust">
+            <p>Rust</p>
+        </div>
+
+        <!-- Vyper -->
+        <div class="logo-card">
+            <img src="https://docs.vyperlang.org/en/stable/_images/logo.svg" alt="Vyper">
+            <p>Vyper</p>
+        </div>
+
+        <!-- Go (Golang) -->
+        <div class="logo-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREQnMdJV3ApiU3GVDtZId7eCPbxhCePZ_W7w&s" alt="Go">
+            <p>Go</p>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="logo-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript">
+            <p>JavaScript</p>
+        </div>
+
+        <!-- Python -->
+        <div class="logo-card">
+            <img src="https://banner2.cleanpng.com/20181128/cbr/kisspng-python-programming-basics-for-absolute-beginners-michigan-python-user-group-5-jul-2-18-1713916787253.webp" alt="Python">
+            <p>Python</p>
+        </div>
+
+        <!-- Haskell -->
+        <div class="logo-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjS6BbV5zloo19hpegy_zpz7C4nJ0OXX7UGw&s" alt="Haskell">
+            <p>Haskell</p>
+        </div>
+
+        <!-- C++ -->
+        <div class="logo-card">
+            <img src="https://i.redd.it/31b2ii8hchi31.jpg" alt="C++">
+            <p>C++</p>
+        </div>
+
+        <!-- Clarity -->
+        <div class="logo-card">
+            <img src="https://avatars.githubusercontent.com/u/66125257?s=280&v=4" alt="Clarity">
+            <p>Clarity</p>
+        </div>
+
+        <!-- Move -->
+        <div class="logo-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-3JMOVoA9sZb9WZ72w-dkUn4tJy7NGu-zYQ&s" alt="Move">
+            <p>Move</p>
+        </div>
+    </div>
+
+</body>
+</html>
