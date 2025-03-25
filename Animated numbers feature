@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics Showcase</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        /* Section Styling */
+        .data-showcase {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 40px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* Individual Cards */
+        .data-card {
+            background: linear-gradient(135deg, #f8f8f8, #ffffff);
+            border-radius: 15px;
+            padding: 30px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .data-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Icons */
+        .icon {
+            font-size: 50px;
+            color: #ffcc00;
+            margin-bottom: 15px;
+            animation: float 2s infinite alternate ease-in-out;
+        }
+
+        @keyframes float {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-8px);
+            }
+        }
+
+        /* Counter Animation */
+        .counter {
+            font-size: 40px;
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .counter-label {
+            font-size: 16px;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>🚀 Transforming Data into Actionable Insights</h2>
+    <p>Our cutting-edge data solutions empower businesses with real-time analytics, predictive intelligence, and AI-driven automation.</p>
+
+    <div class="data-showcase">
+        
+        <div class="data-card">
+            <div class="icon">📊</div>
+            <div class="counter" data-target="32">0</div>
+            <div class="counter-label">BI Dashboards Deployed</div>
+        </div>
+
+        <div class="data-card">
+            <div class="icon">🤖</div>
+            <div class="counter" data-target="62">0</div>
+            <div class="counter-label">AI-Driven Data Models</div>
+        </div>
+
+        <div class="data-card">
+            <div class="icon">🔍</div>
+            <div class="counter" data-target="102">0</div>
+            <div class="counter-label">Real-Time Reports Generated</div>
+        </div>
+
+        <div class="data-card">
+            <div class="icon">📡</div>
+            <div class="counter" data-target="24">0</div>
+            <div class="counter-label">Big Data Projects Completed</div>
+        </div>
+
+        <div class="data-card">
+            <div class="icon">📈</div>
+            <div class="counter" data-target="43">0</div>
+            <div class="counter-label">Predictive Analytics Implementations</div>
+        </div>
+
+        <div class="data-card">
+            <div class="icon">⚡</div>
+            <div class="counter" data-target="38">0</div>
+            <div class="counter-label">Automated Workflows Created</div>
+        </div>
+
+    </div>
+
+    <script>
+        // Counter Animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // Adjust speed of counting
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const updateCount = () => {
+                    const count = +counter.innerText;
+                    const increment = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + increment);
+                        setTimeout(updateCount, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        // Trigger Animation on Scroll
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.disconnect(); // Run animation only once
+                }
+            });
+        });
+
+        observer.observe(document.querySelector('.data-showcase'));
+
+    </script>
+
+</body>
+</html>
