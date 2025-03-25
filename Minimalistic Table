@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Businesses Growth Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: transparent;
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .results-container {
+            max-width: 800px;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: white;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid white;
+            text-align: center;
+        }
+        th {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="results-container">
+        <h2>Total Businesses Growth Results</h2>
+        <table>
+            <tr>
+                <th>Business Name</th>
+                <th>Profit</th>
+                <th>in %</th>
+            </tr>
+            <tr><td>Hoteles Margaritas</td><td>$16,000</td><td>300%</td></tr>
+            <tr><td>Semicon TW</td><td>$18,000</td><td>357%</td></tr>
+            <tr><td>Bellas Boutique</td><td>$18,500</td><td>562%</td></tr>
+            <tr><td>Cleaning & Painting Johnson</td><td>$29,000</td><td>1,066%</td></tr>
+            <tr><td>Towing & Caring Chacon</td><td>$34,000</td><td>3,500%</td></tr>
+            <tr><td>Charlies Restaurant</td><td>$12,000</td><td>271%</td></tr>
+            <tr><td>Hotel El Paradero</td><td>$14,300</td><td>320%</td></tr>
+            <tr><td>Automotive Creations by G</td><td>$10,000</td><td>170%</td></tr>
+            <tr><td>Rafab</td><td>$11,700</td><td>150%</td></tr>
+        </table>
+    </div>
+</body>
+</html>
