@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable Service Boxes</title>
+    <style>
+        /* Background */
+        #our-services {
+            background-color: #fafafa;
+            color: #333;
+            text-align: center;
+            padding: 2vw 3vw;
+        }
+
+        /* Section Heading */
+        #our-services h2 {
+            font-size: 2.2vw;
+            margin-bottom: 3vw;
+            text-transform: uppercase;
+            color: #4a4a4a;
+        }
+
+        /* Grid Layout */
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2vw;
+            max-width: 90vw;
+            margin: 0 auto;
+        }
+
+        /* Service Cards */
+        .service {
+            background-color: white;
+            padding: 2vw;
+            border-radius: 1vw;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+            text-decoration: none; /* Remove underline */
+            color: inherit; /* Keep original text color */
+        }
+
+        /* Make Entire Box Clickable */
+        .service a {
+            display: block;
+            text-decoration: none; /* Remove default link styling */
+            color: inherit;
+        }
+
+        /* Service Hover */
+        .service:hover {
+            transform: translateY(-0.5vw);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+        }
+
+        /* Service Images */
+        .service-image img {
+            max-width: 7vw;
+            height: auto;
+            margin-bottom: 1.5vw;
+        }
+
+        /* Service Titles */
+        .service h3 {
+            font-size: 1.5vw;
+            color: #1c1c1c;
+            margin-bottom: 1.5vw;
+            text-decoration: none; /* Ensure text isn't underlined */
+        }
+
+        /* Service Descriptions */
+        .service p {
+            font-size: 1vw;
+            color: #777;
+            margin-bottom: 1.5vw;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            #our-services h2 {
+                font-size: 5vw;
+            }
+            .service h3 {
+                font-size: 3vw;
+            }
+            .service p {
+                font-size: 2.5vw;
+            }
+            .service-image img {
+                max-width: 12vw;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Services Section -->
+    <section id="our-services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            
+            <a href="https://victorianvanguardventures.com/app-service" class="service" target="_blank" rel="noopener noreferrer">
+                <div class="service-image">
+                    <img src="https://img.freepik.com/premium-vector/computer-screen-is-surrounded-by-different-electronic-devices-minimalistic-setup-install-concept-software-simple-minimalist-flat-vector-illustration_538213-51905.jpg" alt="Application Services">
+                </div>
+                <h3>Application Services</h3>
+                <p>We build custom applications that help optimize your operations.</p>
+            </a>
+
+            <a href="https://victorianvanguardventures.com/technology-advisory" class="service" target="_blank" rel="noopener noreferrer">
+                <div class="service-image">
+                    <img src="https://img.freepik.com/premium-photo/security-analyst-tech-ethics-advisor-virtual-flat-minimal-image_987764-220768.jpg" alt="Technology Advisory">
+                </div>
+                <h3>Technology Advisory</h3>
+                <p>We offer insights into the latest technologies to keep your business competitive.</p>
+            </a>
+
+            <a href="https://victorianvanguardventures.com/digital-enterprise" class="service" target="_blank" rel="noopener noreferrer">
+                <div class="service-image">
+                    <img src="https://img.freepik.com/premium-vector/minimalist-digital-marketing-social-media-instagram-post-template_638606-626.jpg" alt="Digital Enterprise">
+                </div>
+                <h3>Digital Enterprise</h3>
+                <p>We design seamless systems that integrate your data and business processes.</p>
+            </a>
+
+            <a href="https://victorianvanguardventures.com/data-analytics" class="service" target="_blank" rel="noopener noreferrer">
+                <div class="service-image">
+                    <img src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://media.easy-peasy.ai/b14522bd-aae2-4386-9efc-7459e0a9fe57/c12000f2-23d6-417e-a0b0-fd0a0a61aeff.png" alt="Data Analytics">
+                </div>
+                <h3>Data Analytics</h3>
+                <p>We help you harness the power of data for informed decision-making.</p>
+            </a>
+
+            <a href="https://victorianvanguardventures.com/intelligent-automation" class="service" target="_blank" rel="noopener noreferrer">
+                <div class="service-image">
+                    <img src="https://www.processmaker.com/wp-content/uploads/2023/09/2304.i039.016.F.m004.c9.AI-generated-art-AI-powered-content-creation-isometric-768x630.jpg" alt="Intelligent Automation">
+                </div>
+                <h3>Intelligent Automation</h3>
+                <p>Automate your business processes for higher efficiency and less error.</p>
+            </a>
+
+            <a href="https://victorianvanguardventures.com/managed-it-services" class="service" target="_blank" rel="noopener noreferrer">
+                <div class="service-image">
+                    <img src="https://img.freepik.com/free-vector/internet-connection-designs-collection_1209-49.jpg?t=st=1738559615~exp=1738563215~hmac=ee2ca421bf82999a7b9f010008c128e76e74677e0b001c1d8ec012afe5d0de92&w=740" alt="Managed IT Services">
+                </div>
+                <h3>Managed IT Services</h3>
+                <p>We manage your IT infrastructure, ensuring smooth and uninterrupted operations.</p>
+            </a>
+
+        </div>
+    </section>
+
+</body>
+</html>
