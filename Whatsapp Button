@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Button with Animation</title>
+    <style>
+        .whatsapp-button {
+            display: inline-block;
+            cursor: pointer;
+            opacity: 0; /* Start hidden */
+            transform: translateY(20px); /* Start slightly below */
+            animation: fadeInUp 1s ease-out forwards; /* Apply animation */
+        }
+
+        .whatsapp-button img {
+            width: 50px; /* Adjust size as needed */
+            height: 50px;
+            border-radius: 50%;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .whatsapp-button img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Keyframes for fade-in and slide-up effect */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/5216146063201?text=Hola,%20me%20pudieras%20compartir%20más%20información%20sobre%20las%20experiencias%20en%20la%20Sierra%20Tarahumara."
+       target="_blank" class="whatsapp-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+</body>
+</html>
