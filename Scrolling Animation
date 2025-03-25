@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Scrolling Logos</title>
+    <style>
+        /* Container Styling */
+        .logo-section {
+            position: relative;
+            background: transparent;
+            padding: 10px 0;
+            text-align: center;
+            overflow: hidden; /* Prevents logos from overflowing */
+            white-space: nowrap;
+        }
+
+        /* Title Styling */
+        .logo-section h2 {
+            color: white;
+            font-size: 2.2vw;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        /* Scrolling Container */
+        .logo-slider {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            width: max-content;
+            animation: scroll 60s linear infinite; /* Slowed Down */
+        }
+
+        /* Logo Styling */
+        .logo-slider img {
+            width: 75px;
+            height: 75px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            filter: brightness(90%);
+        }
+
+        /* Hover Effect */
+        .logo-slider img:hover {
+            transform: scale(1.1);
+            filter: brightness(100%);
+        }
+
+        /* Animation for Infinite Scroll */
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Duplicate the logos for a seamless infinite loop */
+        .logo-track {
+            display: flex;
+            gap: 20px;
+            animation: scroll 60s linear infinite; /* Slowest Speed */
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .logo-section h2 {
+                font-size: 4vw;
+            }
+            .logo-slider img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-section h2 {
+                font-size: 5vw;
+            }
+            .logo-slider img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo Section -->
+    <section class="logo-section">
+        <h2>Our Partners & Technologies</h2>
+        <div class="logo-slider">
+            <div class="logo-track">
+                <img src="https://i.ibb.co/vCpz2rXC/google-logo.png" alt="Google">
+                <img src="https://i.ibb.co/qY8rJgpv/mac-os.png" alt="Apple">
+                <img src="https://i.ibb.co/FLCMDTZf/windows-10.png" alt="Microsoft">
+                <img src="https://i.ibb.co/bRygqFDS/amazon.png" alt="Amazon">
+                <img src="https://i.ibb.co/Ng3S8hPY/nike-removebg-preview.png" alt="Nike">
+                <img src="https://i.ibb.co/fz6dpHk9/adidas-1-removebg-preview.png" alt="Adidas">
+                <img src="https://i.ibb.co/tMbKqfN8/meta-removebg-preview.png" alt="Meta">
+                <img src="https://i.ibb.co/9kMfVjgR/twitterx.png" alt="Twitter">
+                <img src="https://i.ibb.co/dsmQM2xh/mcdonalds-app.png" alt="McDonald's">
+                <img src="https://i.ibb.co/wNGrRd3G/spotify.png" alt="Spotify">
+                <img src="https://i.ibb.co/tTbS6tGT/A-State-Stack-1-C-White-Dark.png" alt="ASU">
+
+                <!-- Duplicated Logos for Seamless Loop -->
+                <img src="https://i.ibb.co/vCpz2rXC/google-logo.png" alt="Google">
+                <img src="https://i.ibb.co/qY8rJgpv/mac-os.png" alt="Apple">
+                <img src="https://i.ibb.co/FLCMDTZf/windows-10.png" alt="Microsoft">
+                <img src="https://i.ibb.co/bRygqFDS/amazon.png" alt="Amazon">
+                <img src="https://i.ibb.co/Ng3S8hPY/nike-removebg-preview.png" alt="Nike">
+                <img src="https://i.ibb.co/fz6dpHk9/adidas-1-removebg-preview.png" alt="Adidas">
+                <img src="https://i.ibb.co/tMbKqfN8/meta-removebg-preview.png" alt="Meta">
+                <img src="https://i.ibb.co/9kMfVjgR/twitterx.png" alt="Twitter">
+                <img src="https://i.ibb.co/dsmQM2xh/mcdonalds-app.png" alt="McDonald's">
+                <img src="https://i.ibb.co/wNGrRd3G/spotify.png" alt="Spotify">
+                <img src="https://i.ibb.co/tTbS6tGT/A-State-Stack-1-C-White-Dark.png" alt="ASU">
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
